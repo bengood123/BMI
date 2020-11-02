@@ -1,0 +1,308 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+input[type=button]{
+    outline: none;
+    cursor: pointer;
+}
+/*head-----------------------------------------------------------*/
+.head{
+    background-color: rgb(66,66,66);
+    display: flex;
+    justify-content: space-evenly;
+}
+/*head內的div左右距離------------------------------------------*/
+.BMIlogo{
+    padding: 50px 0;
+}
+.input-info{
+    padding: 50px 0;
+}
+.btn-result{
+    padding: 70px 0;
+}
+.input-info p{
+    color: rgb(255,211,102);
+}
+/*輸入資訊欄位及結果按鈕設計--------------------------------------*/
+input[type=text]{
+    margin-bottom: 20px;
+    background-color: rgb(100,100,100);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(255,211,102);
+    font-size: 16px;
+    padding: 5px;
+}
+input::placeholder{
+    color: white;
+}
+.input-info p{
+    padding-bottom: 5px;
+}
+.submit input[type=button]{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255,211,102);
+    border: 1px solid  rgb(255,211,102);
+    font-size: 18px;
+}
+/*----------替換按鈕設計--------------*/
+
+.status{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid white;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.7;
+    position: relative;
+    
+}
+.status span{
+    font-size: 18px;
+}
+.final-state{
+    color: white;
+    position: absolute;
+    top: 30px;
+    right: -140px;
+    font-size: 22px;
+    text-align: left;
+}
+.final-nb {
+    font-size: 20px;
+}
+.refresh{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: white;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+}
+.refresh img{
+    padding: 5px;
+}
+.refresh a{
+    display: inline-block;
+}
+/*--result-gray--*/
+.result-gray .status{
+    border: 10px solid gray;
+}
+.result-gray .final-nb{
+    color: gray;
+}
+.result-gray span{
+    color: gray;
+}
+.result-gray .refresh{
+    background-color: gray;
+}
+.result-gray .final-state{
+    color: gray;
+}
+/*----result-yellow------*/
+.result-yellow .status{
+    border: 10px solid yellow;
+}
+.result-yellow .final-nb{
+    color: yellow;
+}
+.result-yellow span{
+    color: yellow;
+}
+.result-yellow .refresh{
+    background-color: yellow;
+}
+.result-yellow .final-state{
+    color: yellow;
+}
+/*--------.result-orange----------*/
+.result-orange .status{
+    border: 10px solid orange;
+}
+.result-orange .final-nb{
+    color: orange;
+}
+.result-orange span{
+    color:orange;
+}
+.result-orange .refresh{
+    background-color: orange;
+}
+.result-orange .final-state{
+    color:orange;
+}
+/*--------.result-green----------*/
+.result-green .status{
+    border: 10px solid green;
+}
+.result-green .final-nb{
+    color:green;
+}
+.result-green span{
+    color: green;
+}
+.result-green .refresh{
+    background-color: green;
+}
+.result-green .final-state{
+    color:green;
+}
+/*-------.result-red-----------*/
+.result-red,.result-gray,.result-green,.result-orange,.result-pink,.result-yellow{
+    display: flex;
+    align-items: center;
+}
+.result-red .status{
+    border: 10px solid red;
+}
+.result-red .final-nb{
+    color:red;
+}
+.result-red span{
+    color: red;
+}
+.result-red .refresh{
+    background-color:red;
+}
+.result-red .final-state{
+    color:red;
+}
+/*---------.result-pink---------*/
+.result-pink .status{
+    border: 10px solid pink;
+}
+.result-pink .final-nb{
+    color:pink;
+}
+.result-pink span{
+    color: pink;
+}
+.result-pink .refresh{
+    background-color:pink;
+}
+.result-pink .final-state{
+    color:pink;
+}
+/*設計結果顯示Ul-Li的格式-----------------------------------*/
+.content{
+    background-color: rgb(245,245,245);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content h2{
+    text-align: center;
+    font-size: 24px;
+    padding: 40px 0;
+}
+/*顯示list內li的左側提示顏色*/
+.gray{
+    border-left: 10px solid gray;
+}
+.yellow{
+    border-left: 10px solid yellow;
+}
+.orange{
+    border-left: 10px solid orange;
+}
+.green{
+    border-left: 10px solid green;
+}
+.red{
+    border-left: 10px solid red;
+}
+.pink{
+    border-left: 10px solid pink;
+}
+.list{
+    width: 1200px;
+    display: inline-block;
+}
+.list li{
+    background-color: white;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 22px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list li em{
+    color: tomato;
+    padding: 0 10px;
+}
+.del-btn{
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bolder;
+    background-color:  rgb(255,211,102);
+    border-radius: 10px;
+}
+
+.hidebtn{
+    display: none;
+}
+/*footer版面設計---------------------------------------------*/
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgb(255,211,102);
+}
+.footer img{
+    padding: 30px 0;
+}
